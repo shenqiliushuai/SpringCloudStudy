@@ -24,6 +24,8 @@
         <module>cloud-consumer-feign-hystrix-order80</module>
         <module>cloud-consumer-hystrix-dashboard9001</module>
         <module>cloud-gateway-gateway9527</module>
+        <module>cloud-config-center-3344</module>
+        <module>cloud-config-client-3355</module>
     </modules>
 
     <!--jar包统一管理-->
@@ -113,7 +115,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <fork>true</fork>
                     <addResources>true</addResources>
                 </configuration>
             </plugin>

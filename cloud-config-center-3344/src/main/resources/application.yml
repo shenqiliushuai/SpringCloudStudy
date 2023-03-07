@@ -1,0 +1,28 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          username: shenqiliushuai
+          password: ak47-sss
+          #git链接
+#          uri: git@github.com:shenqiliushuai/SpringCloudStudy.git
+          uri: https://github.com/shenqiliushuai/SpringCloudStudy.git
+          search-paths:
+            - SpringCloudStudy  #路径
+          skip-ssl-validation: true #跳过SSL
+          timeout: 100 #超时时间
+          #请求地址   http://localhost:3344/master/config-dev.yml
+      label: master #分支名
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+logging:
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'

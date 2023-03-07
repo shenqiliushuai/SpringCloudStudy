@@ -1,0 +1,23 @@
+server:
+  port: 3355
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      label: master   #分支名
+      name: config    #配置文件名
+      profile: dev    #文件后缀
+      uri: http://localhost:3344    #配置中心地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+#暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+#需要加actuator依赖，动态刷新
+# curl —X POST "http://localhost:3355/actuator/refresh"
