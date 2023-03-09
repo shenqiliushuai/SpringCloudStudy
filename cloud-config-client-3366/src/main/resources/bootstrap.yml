@@ -1,5 +1,5 @@
 server:
-  port: 3355
+  port: 3366
 spring:
   application:
     name: config-client
@@ -26,6 +26,3 @@ management:
         include: "*"
 #需要加actuator依赖，动态刷新
 # curl —X POST "http://localhost:3355/actuator/refresh"
-# bus消息总线精确通知
-# 公式: http://localhost:配置中心的端口号/actuator/bus-refresh/{destination)
-# curl -X POST "http://localhost:3344/actuator/bus-refresh/config-client:3355"
